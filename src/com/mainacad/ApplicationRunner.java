@@ -20,5 +20,8 @@ public class ApplicationRunner {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        LOGGER.info("Work");
+
     }
 }

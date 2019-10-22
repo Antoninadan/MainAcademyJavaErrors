@@ -16,14 +16,14 @@ public class NumberService {
             result = Double.valueOf(number1 / number2);
             return 15.0;
         } catch (ArithmeticException | ClassCastException e) {
-            return 10.0;
             LOGGER.severe("There is zero as divider");
+//            return 10.0;
         } catch (RuntimeException e) {
-            return 5.0;
             LOGGER.severe("There is RuntimeException");
+            return 5.0;
         } catch (Exception e) {
-            return 3.0;
             LOGGER.severe("There is Exception");
+            return 3.0;
         } finally {
             result = 0.0;
         }
@@ -37,18 +37,18 @@ public class NumberService {
         return result;
     }
 
-
-    public static void fileWork(){
+    public static void fileWork() {
         File file = new File("C:/work/cc.txt");
         try {
             FileWriter wtriter = new FileWriter(file);
             wtriter.write("text");
         } catch (IOException e) {
-            throw new MyCastomException("fghdffj");
             e.printStackTrace();
-        } catch (MyCastomException e) {
-
+//            throw new MyCastomException();
+//        } catch (MyCastomException e) {
         }
     }
+
+
 
 }
