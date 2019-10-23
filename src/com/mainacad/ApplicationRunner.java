@@ -11,18 +11,22 @@ public class ApplicationRunner {
     private static final Logger LOGGER = Logger.getLogger(ApplicationRunner.class.getName());
 
     public static void main(String[] args) {
+
+//        // call NullPointerException
 //        String text = null;
-////        LOGGER.info("Lenth of " + text.length());
-//
+//        LOGGER.info("Lenth of " + text.length());
+
+//        // test /0
 //        LOGGER.info("Result is " + NumberService.getDivResult(12, 0));
-//
-//        try {
-//            LOGGER.info("Result is " +NumberService.getDivResultThrows(12, 0));
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//
-//        LOGGER.info("Work");
+
+        // test
+        try {
+            LOGGER.info("Result is " +NumberService.getDivResultThrows(12, 0));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        LOGGER.info("Work");
 
 
 //        // Test getAreaValue
@@ -44,7 +48,17 @@ public class ApplicationRunner {
 //        procB();
 
         //
-        System.out.println(getDivResult(3,0));
+//        System.out.println(getDivResult(3,0));
+
+//        // test ArrayIndexOutOfBoundsException
+//        int[] mas = {1, 2, 3};
+//        try {
+//            for (int i=0; i<=mas.length; i++){
+//                LOGGER.info(Integer.toString(mas[i]));
+//            }
+//        } catch (ArrayIndexOutOfBoundsException e) {
+//            LOGGER.severe("out of range");
+//        }
 
     }
 
